@@ -169,8 +169,8 @@ html, body {
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s ease;
-    width: 100%;
-    max-width: 200px;
+    width: 50vw;
+    max-width: 50vw;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
