@@ -257,8 +257,8 @@ html, body {
 .button-container button {
     flex: 1;
     margin: 0 5px;
-    padding: 15px 20px; /* Увеличенный паддинг для лучшего вида */
-    height: 50px; /* Увеличенная высота для лучшего вида */
+    padding: 15px 20px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -275,9 +275,10 @@ html, body {
 /* Медиа-запросы для адаптивности */
 @media screen and (max-width: 600px) {
     .modal-content {
-        width: 85%;
-        max-width: 85%;
+        width: 90%;
+        max-width: 90%;
         margin: 0 auto;
+        padding: 15px;
     }
 
     .buttons-container {
@@ -286,15 +287,45 @@ html, body {
 
     .tool-button,
     .sub-option-button {
-        font-size: 18px;
-        padding: 12px;
+        font-size: 16px;
+        padding: 10px;
     }
 
     .button-container button {
-        padding: 10px 15px; /* Уменьшенный паддинг для мобильных устройств */
-        
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .modal-content h2,
+    .modal-content h3,
+    .modal-content h4 {
+        font-size: 20px;
+    }
+
+    .modal-content p {
         font-size: 16px;
     }
+}
+
+/* Общие стили для обеспечения отзывчивости */
+* {
+    box-sizing: border-box;
+}
+
+.StartPage_wrapper,
+.modal-content,
+.buttons-container,
+.button-container {
+    max-width: 100%;
+}
+
+.StartPage_text_wrapper,
+.buttons-title,
+.modal-content p,
+.tool-button,
+.sub-option-button {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 /* Закомментированные стили */
