@@ -276,6 +276,8 @@ html, body {
 @media screen and (max-width: 600px) {
     .modal-content {
         width: 95%;
+        max-width: 95%;
+        margin: 0 auto;
     }
 
     .buttons-container {
@@ -290,7 +292,7 @@ html, body {
 
     .button-container button {
         padding: 10px 15px; /* Уменьшенный паддинг для мобильных устройств */
-/* Уменьшенная высота для мобильных устройств */
+        
         font-size: 16px;
     }
 }
