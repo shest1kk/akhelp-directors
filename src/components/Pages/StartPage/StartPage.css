@@ -72,7 +72,8 @@ html, body {
 .button-primary-button,
 .startpage-button,
 .modalClose-button,
-.tool-button {
+.tool-button,
+.sub-option-button {
     font-family: "Montserrat", sans-serif;
     background-color: #fff;
     color: #000;
@@ -105,7 +106,8 @@ html, body {
     font-weight: bolder;
 }
 
-.tool-button {
+.tool-button,
+.sub-option-button {
     margin: 10px 0;
     padding: 15px;
     font-size: 16px;
@@ -114,7 +116,8 @@ html, body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.tool-button:hover {
+.tool-button:hover,
+.sub-option-button:hover {
     background-color: #f0f0f0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
@@ -144,7 +147,9 @@ html, body {
     font-family: 'Montserrat', sans-serif;
 }
 
-.modal-content h2 {
+.modal-content h2,
+.modal-content h3,
+.modal-content h4 {
     margin-top: 0;
     font-size: 24px;
     margin-bottom: 15px;
@@ -152,7 +157,7 @@ html, body {
 }
 
 .modal-content p {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.5;
     color: #666;
     margin-bottom: 20px;
@@ -169,14 +174,8 @@ html, body {
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s ease;
-    width: 50vw;
-    max-width: 50vw;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.modal-content button:hover {
-    background-color: #000;
-    color: #fff;
+    width: 50vw;
 }
 
 /* Стили для контейнера кнопок */
@@ -234,6 +233,45 @@ html, body {
     border-bottom: 1px solid #eee;
 }
 
+/* Стили для подопций */
+.sub-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.sub-option-button {
+    margin: 5px 0;
+}
+
+/* Стили для контейнера кнопок в модальном окне */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.button-container button {
+    flex: 1;
+    margin: 0 5px;
+    padding: 15px 20px; /* Увеличенный паддинг для лучшего вида */
+    height: 50px; /* Увеличенная высота для лучшего вида */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-container button:first-child {
+    margin-left: 0;
+}
+
+.button-container button:last-child {
+    margin-right: 0;
+}
+
 /* Медиа-запросы для адаптивности */
 @media screen and (max-width: 600px) {
     .modal-content {
@@ -244,9 +282,16 @@ html, body {
         padding: 10px;
     }
 
-    .tool-button {
-        font-size: 14px;
+    .tool-button,
+    .sub-option-button {
+        font-size: 18px;
         padding: 12px;
+    }
+
+    .button-container button {
+        padding: 10px 15px; /* Уменьшенный паддинг для мобильных устройств */
+/* Уменьшенная высота для мобильных устройств */
+        font-size: 16px;
     }
 }
 
