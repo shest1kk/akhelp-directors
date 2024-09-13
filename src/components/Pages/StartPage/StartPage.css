@@ -275,8 +275,8 @@ html, body {
 /* Медиа-запросы для адаптивности */
 @media screen and (max-width: 600px) {
     .modal-content {
-        width: 90%;
-        max-width: 90%;
+        width: 93%;
+        max-width: 93%;
         margin: 0 auto;
         padding: 15px;
     }
