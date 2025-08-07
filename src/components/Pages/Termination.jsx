@@ -52,7 +52,7 @@ const Termination = ({ onBack }) => {
     return (
         <div className="termination-wrapper">
             {!selectedTool && (
-                <div className="buttons-section">
+                <div className="buttons-section fade-step">
                     <h3 className="buttons-title">По какой причине твой сотрудник хочет уволиться?</h3>
                     <div className="buttons-container">
                         {terminationButtons.map((button, index) => (
@@ -77,7 +77,7 @@ const Termination = ({ onBack }) => {
             )}
             {selectedTool && (
                 <div className="modal" onClick={handleOutsideClick}>
-                    <div className="modal-content">
+                    <div className="modal-content fade-step">
                         <h3>{selectedTool.texts[currentStep].title}</h3>
                         {selectedTool.texts[currentStep].subOptions ? (
                             <>

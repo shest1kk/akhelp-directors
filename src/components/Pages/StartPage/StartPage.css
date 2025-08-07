@@ -1,4 +1,11 @@
 /* Базовые стили */
+:root {
+    --duration-fast: 180ms;
+    --duration-normal: 280ms;
+    --duration-slow: 420ms;
+    --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+}
 html, body {
     margin: 0;
     padding: 0;
@@ -80,7 +87,7 @@ html, body {
     text-align: center;
     width: 100%;
     max-width: 400px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Добавлен шадоубокс */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .button-primary-button {
@@ -110,8 +117,10 @@ html, body {
     padding: 15px;
     font-size: 16px;
     border-radius: 10px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Добавлен шадоубокс */
+    transition: box-shadow var(--duration-fast) var(--ease-in-out),
+                transform var(--duration-fast) var(--ease-in-out),
+                background-color var(--duration-fast) var(--ease-in-out);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .tool-button:hover,
@@ -132,7 +141,7 @@ html, body {
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    animation: fadeIn 0.3s ease-in-out;
+    animation: fadeIn var(--duration-normal) var(--ease-out);
 }
 
 .modal-content {
@@ -144,7 +153,8 @@ html, body {
     max-width: 400px;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
-    animation: slideInUp 0.3s ease-out;
+    animation: slideInUp var(--duration-normal) var(--ease-out);
+    will-change: transform, opacity;
 }
 
 .modal-content h2,
@@ -173,7 +183,9 @@ html, body {
     font-weight: 600;
     border-radius: 10px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: box-shadow var(--duration-fast) var(--ease-in-out),
+                background-color var(--duration-fast) var(--ease-in-out),
+                transform var(--duration-fast) var(--ease-in-out);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     width: 50vw;
 }
@@ -189,12 +201,13 @@ html, body {
     padding: 20px;
     opacity: 0;
     transform: translateY(20px);
-    animation: fadeInUp 0.5s forwards;
+    animation: fadeInUp var(--duration-slow) var(--ease-out) forwards;
     height: 70vh;
     overflow-y: auto;
     margin-left: auto;
     margin-right: auto;
     box-sizing: border-box;
+    will-change: transform, opacity;
 }
 
 .buttons-title {
@@ -270,6 +283,8 @@ html, body {
 
 .button-container button:last-child {
     margin-right: 0;
+    color: #fff;
+    background-color: #007bff;
 }
 
 /* Медиа-запросы для адаптивности */
@@ -348,7 +363,7 @@ html, body {
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    animation: fadeIn 0.3s ease-in-out;
+    animation: fadeIn var(--duration-normal) var(--ease-out);
 }
 
 .options-container {
@@ -360,7 +375,8 @@ html, body {
     max-width: 400px;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
-    animation: slideInUp 0.3s ease-out;
+    animation: slideInUp var(--duration-normal) var(--ease-out);
+    will-change: transform, opacity;
 }
 
 .options-title {
@@ -377,7 +393,9 @@ html, body {
     font-weight: 600;
     border-radius: 10px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: box-shadow var(--duration-fast) var(--ease-in-out),
+                transform var(--duration-fast) var(--ease-in-out),
+                background-color var(--duration-fast) var(--ease-in-out);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 350px;
@@ -414,7 +432,7 @@ html, body {
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    animation: fadeIn 0.3s ease-in-out;
+    animation: fadeIn var(--duration-normal) var(--ease-out);
 }
 
 .termination-wrapper .buttons-section {
@@ -426,9 +444,10 @@ html, body {
     max-width: 400px;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
-    animation: slideInUp 0.3s ease-out;
+    animation: slideInUp var(--duration-normal) var(--ease-out);
     max-height: 80vh;
     overflow-y: auto;
+    will-change: transform, opacity;
 }
 
 .termination-wrapper .buttons-title {
@@ -452,7 +471,9 @@ html, body {
     padding: 15px;
     font-size: 16px;
     border-radius: 10px;
-    transition: all 0.3s ease;
+    transition: box-shadow var(--duration-fast) var(--ease-in-out),
+                transform var(--duration-fast) var(--ease-in-out),
+                background-color var(--duration-fast) var(--ease-in-out);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     width: 100%;
     max-width: 350px;
@@ -470,7 +491,9 @@ html, body {
     font-size: 16px;
     font-weight: 600;
     border-radius: 10px;
-    transition: all 0.3s ease;
+    transition: box-shadow var(--duration-fast) var(--ease-in-out),
+                transform var(--duration-fast) var(--ease-in-out),
+                background-color var(--duration-fast) var(--ease-in-out);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     background-color: #f8f9fa;
     color: #333;
@@ -497,7 +520,7 @@ html, body {
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    animation: fadeIn 0.3s ease-in-out;
+    animation: fadeIn var(--duration-normal) var(--ease-out);
 }
 
 .parent-communication-wrapper .content-section {
@@ -509,7 +532,8 @@ html, body {
     max-width: 400px;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
-    animation: slideInUp 0.3s ease-out;
+    animation: slideInUp var(--duration-normal) var(--ease-out);
+    will-change: transform, opacity;
 }
 
 .parent-communication-wrapper h3 {
@@ -602,6 +626,8 @@ html, body {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     min-width: 100px;
+    transition: box-shadow var(--duration-fast) var(--ease-in-out),
+                transform var(--duration-fast) var(--ease-in-out);
 }
 
 .next-nav-button {
@@ -691,6 +717,16 @@ html, body {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* Prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
     }
 }
 
@@ -896,3 +932,38 @@ html, body {
         font-size: 16px;
     }
 }
+
+/* Эффект нажатия для всех основных кнопок */
+.option-button:active,
+.tool-button:active,
+.sub-option-button:active,
+.nav-button:active,
+.back-button:active,
+.button-container button:active {
+    transform: scale(0.98);
+}
+
+/* Плавность для кнопок в модальном футере Termination */
+.button-container button {
+    transition: box-shadow var(--duration-fast) var(--ease-in-out),
+                transform var(--duration-fast) var(--ease-in-out),
+                background-color var(--duration-fast) var(--ease-in-out);
+}
+
+/* Анимация плавной смены шага */
+.fade-step {
+    animation: fadeSwap var(--duration-normal) var(--ease-out);
+    will-change: opacity, transform;
+}
+
+@keyframes fadeSwap {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+

@@ -95,7 +95,7 @@ const ParentCommunication = ({ onBack }) => {
 
     return (
         <div className="parent-communication-wrapper">
-            <div className="content-section">
+            <div className="content-section fade-step">
                 <h3>{currentStepData.title}</h3>
                 
                 <div 
@@ -103,7 +103,7 @@ const ParentCommunication = ({ onBack }) => {
                     dangerouslySetInnerHTML={createMarkup(currentStepData.content)}
                 />
                 
-                <div className="navigation-buttons">
+                <div className="navigation-buttons fade-step">
                     {currentStepData.buttons.map((button, index) => {
                         // Если это первый шаг и кнопка "Назад", заменяем на "Назад к меню"
                         if (currentStep === 0 && button.action === 'back') {
