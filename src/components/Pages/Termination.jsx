@@ -49,6 +49,11 @@ const Termination = ({ onBack }) => {
         }
     };
 
+    const hasBackButton = selectedTool ? currentStep > 0 : false;
+    const isLastStep = selectedTool ? currentStep === selectedTool.texts.length - 1 : false;
+    const hasForwardButton = selectedTool ? !isLastStep : false;
+    const isSingleActionLayout = selectedTool ? ((hasBackButton ? 1 : 0) + (hasForwardButton ? 1 : 0) === 1) : false;
+
     return (
         <div className="termination-wrapper">
             {!selectedTool && (
@@ -100,7 +105,7 @@ const Termination = ({ onBack }) => {
                         ) : (
                             <p>{formatContent(selectedTool.texts[currentStep].content)}</p>
                         )}
-                        <div className="button-container">
+                        <div className={`button-container ${isSingleActionLayout ? 'single' : ''}`}>
                             {currentStep > 0 && (
                                 <button onClick={handlePreviousStep}>Назад</button>
                             )}
