@@ -495,6 +495,7 @@ html, body {
     font-size: 16px;
     font-weight: 600;
     border-radius: 10px;
+    cursor: pointer;
     transition: box-shadow var(--duration-fast) var(--ease-in-out),
                 transform var(--duration-fast) var(--ease-in-out),
                 background-color var(--duration-fast) var(--ease-in-out);
@@ -628,6 +629,7 @@ html, body {
     font-size: 16px;
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     min-width: 100px;
@@ -928,6 +930,10 @@ html, body {
         min-width: auto;
     }
 
+    .next-nav-button:hover {
+        cursor: pointer;
+    }
+    
     .placeholder-content p {
         font-size: 14px;
         margin-bottom: 12px;
@@ -953,6 +959,7 @@ html, body {
     transition: box-shadow var(--duration-fast) var(--ease-in-out),
                 transform var(--duration-fast) var(--ease-in-out),
                 background-color var(--duration-fast) var(--ease-in-out);
+    cursor: pointer;
 }
 
 /* Анимация плавной смены шага */
