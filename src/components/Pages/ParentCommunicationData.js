@@ -87,8 +87,9 @@ export const parentCommunicationSteps = [
 
         `,
         buttons: [
-            { text: "Категорично не планируют оставаться", action: "not_continue" },
+
             { text: "Готовы продолжить", action: "ready_to_continue" },
+            { text: "Категорично не планируют оставаться", action: "not_continue", color: "red" },
             { text: "Назад", action: "back" }
         ]
     },
@@ -101,7 +102,7 @@ export const parentCommunicationSteps = [
             </ul>
         `,
         buttons: [
-            { text: "Завершить", action: "finish" }
+            { text: "Завершить", action: "finish", color: "red" }
         ]
     },
     {
