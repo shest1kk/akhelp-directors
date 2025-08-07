@@ -65,13 +65,15 @@ const Termination = ({ onBack }) => {
                             </Button>
                         ))}
                     </div>
-                    <Button 
-                        className="back-button"
-                        onClick={onBack}
-                    >
-                        Назад
-                    </Button>
                 </div>
+            )}
+            {!selectedTool && (
+                <Button 
+                    className="back-button"
+                    onClick={onBack}
+                >
+                    Назад
+                </Button>
             )}
             {selectedTool && (
                 <div className="modal" onClick={handleOutsideClick}>

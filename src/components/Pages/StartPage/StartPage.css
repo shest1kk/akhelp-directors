@@ -412,6 +412,7 @@ html, body {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     z-index: 1000;
@@ -476,6 +477,8 @@ html, body {
     background-color: #f8f9fa;
     color: #333;
     border: 1px solid #dee2e6;
+    width: 100%;
+    max-width: 400px;
 }
 
 .back-button:hover {
@@ -732,6 +735,12 @@ html, body {
     .termination-wrapper .tool-button {
         font-size: 16px;
         padding: 15px;
+    }
+
+    .back-button {
+        width: 95%;
+        font-size: 14px;
+        padding: 10px 20px;
     }
 
     .placeholder-content p {
