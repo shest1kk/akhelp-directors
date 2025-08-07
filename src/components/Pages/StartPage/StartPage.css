@@ -765,3 +765,134 @@ html, body {
         padding: 10px 20px;
     }
 }
+
+/* Специальные медиа-запросы для экранов 422x625 */
+@media screen and (max-width: 422px) and (max-height: 625px) {
+    .modal-content {
+        width: 95%;
+        max-width: 380px;
+        padding: 15px;
+        margin: 10px;
+    }
+
+    .modal-content h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .modal-content p {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    .modal-content button {
+        width: 100%;
+        max-width: 300px;
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .options-container {
+        width: 95%;
+        max-width: 380px;
+        padding: 15px;
+        margin: 10px;
+    }
+
+    .options-title {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+
+    .option-button {
+        width: 100%;
+        max-width: 280px;
+        font-size: 16px;
+        padding: 8px 12px;
+        margin: 8px 0;
+    }
+
+    .button-divider {
+        width: 70%;
+        margin: 12px auto;
+    }
+
+    .termination-wrapper .buttons-section {
+        width: 95%;
+        max-width: 380px;
+        padding: 20px;
+        margin: 10px;
+        max-height: 70vh;
+    }
+
+    .termination-wrapper .buttons-title {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .termination-wrapper .buttons-container {
+        max-height: 50vh;
+    }
+
+    .termination-wrapper .tool-button {
+        font-size: 14px;
+        padding: 12px;
+        max-width: 280px;
+    }
+
+    .back-button {
+        width: 95%;
+        max-width: 380px;
+        font-size: 14px;
+        padding: 8px 16px;
+        margin-top: 15px;
+    }
+
+    .parent-communication-wrapper .content-section {
+        width: 95%;
+        max-width: 380px;
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .parent-communication-wrapper h3 {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .step-content {
+        margin-bottom: 20px;
+    }
+
+    .step-content h4 {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+
+    .step-content li {
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+
+    .navigation-buttons {
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 15px;
+    }
+
+    .nav-button {
+        width: 100%;
+        font-size: 14px;
+        padding: 8px 16px;
+        min-width: auto;
+    }
+
+    .placeholder-content p {
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+
+    .placeholder-content p:first-child {
+        font-size: 16px;
+    }
+}
