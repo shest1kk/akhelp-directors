@@ -17,10 +17,7 @@ html, body {
 
 /* Стили для основного контейнера */
 .StartPage_wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    position: relative;
     width: 100%;
     min-height: 100vh;
     overflow-x: hidden;
@@ -382,7 +379,8 @@ html, body {
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 50vw;
+    width: 100%;
+    max-width: 350px;
     background-color: #fff;
     color: #000;
     border: none;
@@ -727,7 +725,8 @@ html, body {
     }
 
     .option-button {
-        width: 70%;
+        width: 100%;
+        max-width: 300px;
         font-size: 18px;
         padding: 8px 12px;
     }
